@@ -1,7 +1,9 @@
 ﻿using NUnit.Framework;
 
+[assembly: LevelOfParallelism(3)]
 namespace UnitTestai
 {
+    [Parallelizable(scope: ParallelScope.Children)]
     public class SkaiciuotuvoTestai
     {
         [TestCase(1, 3, 0.33333333333333333)]
