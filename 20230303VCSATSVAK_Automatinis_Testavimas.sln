@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestai", "UnitTestai\Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skaiciuotuvas", "Skaiciuotuvas\Skaiciuotuvas.csproj", "{4180D0D8-3066-4CF8-AC20-AD5464473E8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTestsWithoutPOM", "SeleniumTestsWithoutPOM\SeleniumTestsWithoutPOM.csproj", "{D491C331-D5F8-4E03-B037-48C0C7760D1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4180D0D8-3066-4CF8-AC20-AD5464473E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4180D0D8-3066-4CF8-AC20-AD5464473E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4180D0D8-3066-4CF8-AC20-AD5464473E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D491C331-D5F8-4E03-B037-48C0C7760D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D491C331-D5F8-4E03-B037-48C0C7760D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D491C331-D5F8-4E03-B037-48C0C7760D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D491C331-D5F8-4E03-B037-48C0C7760D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
