@@ -11,7 +11,6 @@ namespace SeleniumTestsWithoutPOM
         public void BasicFirstFormDemoSingleInputField()
         {
             string expectedResult = "Martynas";
-            string tekstas = Console.ReadLine();
 
             IWebDriver driver = new FirefoxDriver();
             driver.Url = "https://demo.seleniumeasy.com/basic-first-form-demo.html";

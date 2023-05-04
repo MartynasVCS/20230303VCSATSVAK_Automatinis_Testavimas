@@ -3,11 +3,11 @@ using OpenQA.Selenium.Chrome;
 
 namespace SeleniumFramework
 {
-    internal class Driver
+    public class Driver
     {
         private static IWebDriver driver;
 
-        internal static void InitializeDriver()
+        public static void InitializeDriver()
         {
             driver = new ChromeDriver();
         }
@@ -22,7 +22,7 @@ namespace SeleniumFramework
             driver.Url = url;
         }
 
-        internal static void ShutdownDriver()
+        public static void ShutdownDriver()
         {
             driver.Quit();
         }
