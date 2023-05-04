@@ -28,5 +28,32 @@ namespace SeleniumTestsWithoutPOM
 
             driver.Quit();
         }
+
+        [Test]
+        public void BasicFirstFormDemoTwoInputFields()
+        {
+            string valueA = "3";
+            string valueB = "4";
+            string expectedResult = "7";
+
+            IWebDriver driver = new FirefoxDriver();
+            driver.Url = "https://demo.seleniumeasy.com/basic-first-form-demo.html";
+
+            IWebElement inputValueA = driver.FindElement(By.XPath("//*[@id=\"value1\"]"));
+            inputValueA.SendKeys(valueA.ToString());
+
+            IWebElement inputValueB = driver.FindElement(By.XPath("//*[@id=\"value2\"]"));
+            inputValueB.SendKeys(valueB.ToString());
+
+            IWebElement buttonGetTotal = driver.FindElement(By.XPath("//*[@id=\"gettotal\"]//button"));
+            buttonGetTotal.Click();
+
+            IWebElement textValueTotal = driver.FindElement(By.XPath("//*[@id=\"displayvalue\"]"));
+            string actualResult = textValueTotal.Text;
+
+            Assert.AreEqual(expectedResult, actualResult);
+
+            driver.Quit();
+        }
     }
 }
