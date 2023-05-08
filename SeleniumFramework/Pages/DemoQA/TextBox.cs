@@ -7,25 +7,25 @@
             Driver.OpenPage("https://demoqa.com/text-box");
         }
 
-        public static void EnteFullName(string name)
+        public static void EnterFullName(string name)
         {
             string locator = "//*[@id='userName']";
             Common.SendKeys(locator, name);
         }
 
-        public static void EnteEmail(string email)
+        public static void EnterEmail(string email)
         {
             string locator = "//*[@id='userEmail']";
             Common.SendKeys(locator, email);
         }
 
-        public static void EnteCurrentAddress(string currentAddress)
+        public static void EnterCurrentAddress(string currentAddress)
         {
             string locator = "//*[@id='currentAddress']";
             Common.SendKeys(locator, currentAddress);
         }
 
-        public static void EntePermanentAddress(string permanentAddress)
+        public static void EnterPermanentAddress(string permanentAddress)
         {
             string locator = "//*[@id='permanentAddress']";
             Common.SendKeys(locator, permanentAddress);

@@ -26,10 +26,10 @@ namespace SeleniumTests.DemoQA
             string expectedCurrentAddress = $"Current Address :{currentAddress}";
             string expectedPermanentAddress = $"Permananet Address :{permanentAddress}";
 
-            TextBox.EnteFullName(name);
-            TextBox.EnteEmail(email);
-            TextBox.EnteCurrentAddress(currentAddress);
-            TextBox.EntePermanentAddress(permanentAddress);
+            TextBox.EnterFullName(name);
+            TextBox.EnterEmail(email);
+            TextBox.EnterCurrentAddress(currentAddress);
+            TextBox.EnterPermanentAddress(permanentAddress);
             TextBox.ClickSubmitButton();
 
             string actualName = TextBox.GetName();
