@@ -9,63 +9,53 @@
 
         public static void EnterFullName(string name)
         {
-            string locator = "//*[@id='userName']";
-            Common.SendKeys(locator, name);
+            Common.SendKeys(Locators.TextBox.inputName, name);
         }
 
         public static void EnterEmail(string email)
         {
-            string locator = "//*[@id='userEmail']";
-            Common.SendKeys(locator, email);
+            Common.SendKeys(Locators.TextBox.inputEmail, email);
         }
 
         public static void EnterCurrentAddress(string currentAddress)
         {
-            string locator = "//*[@id='currentAddress']";
-            Common.SendKeys(locator, currentAddress);
+            Common.SendKeys(Locators.TextBox.inputCurrentAddress, currentAddress);
         }
 
         public static void EnterPermanentAddress(string permanentAddress)
         {
-            string locator = "//*[@id='permanentAddress']";
-            Common.SendKeys(locator, permanentAddress);
+            Common.SendKeys(Locators.TextBox.inputPermanentAddress, permanentAddress);
         }
 
         public static void ClickSubmitButton()
         {
-            string locator = "//*[@id='submit']";
-            Common.ScrollUntilElementIsClickable(locator);
+            Common.ScrollUntilElementIsClickable(Locators.TextBox.buttonSubmit);
         }
 
         public static string GetName()
         {
-            string locator = "//*[@id='name']";
-            return Common.GetElementText(locator);
+            return Common.GetElementText(Locators.TextBox.outputName);
         }
 
         public static string GetEmail()
         {
-            string locator = "//*[@id='email']";
-            return Common.GetElementText(locator);
+            return Common.GetElementText(Locators.TextBox.outputEmail);
         }
 
         public static string GetCurrentAddress()
         {
-            string locator = "//*[@id='output']//*[@id='currentAddress']";
-            return Common.GetElementText(locator);
+            return Common.GetElementText(Locators.TextBox.outputCurrentAddress);
         }
 
         public static string GetPermanentAddress()
         {
-            string locator = "//*[@id='output']//*[@id='permanentAddress']";
-            return Common.GetElementText(locator);
+            return Common.GetElementText(Locators.TextBox.outputPermanentAddress);
         }
 
         public static void ValidateEmailInputBorderColor()
         {
-            string locator = "//*[@id='userEmail']";
             string expectedColor = "rgb(255, 0, 0)";
-            Common.WaitForElementCssAttributeValueToBe(locator, "border-color", expectedColor);
+            Common.WaitForElementCssAttributeValueToBe(Locators.TextBox.inputEmail, "border-color", expectedColor);
         }
     }
 }
