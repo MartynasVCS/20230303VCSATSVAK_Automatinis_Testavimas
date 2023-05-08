@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace SeleniumFramework.Pages
@@ -54,6 +55,18 @@ namespace SeleniumFramework.Pages
                     }
                 }
             }
+        }
+
+        internal static string GetElementCssAttributeValue(string locator, string attribute)
+        {
+             return GetElement(locator).GetCssValue(attribute);
+        }
+
+        internal static void WaitForElementCssAttributeValueToBe(string locator, string attributeName, string expectedAttributeValue)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(2));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(50);   
+            wait.Until(driver => driver.FindElement(By.XPath(locator)).GetCssValue(attributeName).Equals(expectedAttributeValue));
         }
     }
 }

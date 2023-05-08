@@ -43,6 +43,17 @@ namespace SeleniumTests.DemoQA
             Assert.AreEqual(expectedPermanentAddress, actualPermanentAddress);
         }
 
+        [Test]
+        public void EmailValidation()
+        {
+            string invalidEmail = "error";
+
+            TextBox.EnterEmail(invalidEmail);
+            TextBox.ClickSubmitButton();
+
+            TextBox.ValidateEmailInputBorderColor();
+        }
+
         [TearDown]
         public void TearDown()
         {

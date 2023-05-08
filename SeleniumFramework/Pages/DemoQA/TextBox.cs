@@ -60,5 +60,12 @@
             string locator = "//*[@id='output']//*[@id='permanentAddress']";
             return Common.GetElementText(locator);
         }
+
+        public static void ValidateEmailInputBorderColor()
+        {
+            string locator = "//*[@id='userEmail']";
+            string expectedColor = "rgb(255, 0, 0)";
+            Common.WaitForElementCssAttributeValueToBe(locator, "border-color", expectedColor);
+        }
     }
 }
