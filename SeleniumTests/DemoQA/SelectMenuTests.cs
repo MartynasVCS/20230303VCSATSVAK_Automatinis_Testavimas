@@ -14,7 +14,7 @@ namespace SeleniumTests.DemoQA
         }
 
         [Test]
-        public void SelectColorInStandardMenu()
+        public void SelectColorInOldStyleMenu()
         {
             string expectedColor = "Purple";
 
@@ -22,6 +22,17 @@ namespace SeleniumTests.DemoQA
             string actualResult = SelectMenu.GetSelectedColorInOldStyleMenu();
 
             Assert.AreEqual(expectedColor, actualResult);
+        }
+
+        [Test]
+        public void SelectTitleInSelectOneMenu()
+        {
+            string expectedTitle = "Prof.";
+
+            SelectMenu.SelectTitleInSelectOneMenu(expectedTitle);
+            string actualTitle = SelectMenu.GetSelectedTitleInSelectOneMenu();
+
+            StringAssert.Contains(expectedTitle, actualTitle);
         }
 
         [TearDown]

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SeleniumFramework.Pages.DemoQA
+﻿namespace SeleniumFramework.Pages.DemoQA
 {
     public class SelectMenu
     {
@@ -17,6 +15,17 @@ namespace SeleniumFramework.Pages.DemoQA
         public static string GetSelectedColorInOldStyleMenu()
         {
             return Common.GetSelectedOption(Locators.SelectMenu.selectOldStyleMenu);
+        }
+
+        public static void SelectTitleInSelectOneMenu(string expectedTitle)
+        {
+            Common.Click(Locators.SelectMenu.selectSelectOneMenu);
+            Common.Click($"//*[contains(@id, 'react-select') and contains(text(),'{expectedTitle}')]");
+        }
+
+        public static string GetSelectedTitleInSelectOneMenu()
+        {
+            return Common.GetElementText(Locators.SelectMenu.selectSelectOneMenu);
         }
     }
 }

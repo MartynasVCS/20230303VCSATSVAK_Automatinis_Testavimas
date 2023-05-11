@@ -36,6 +36,7 @@
         internal static class SelectMenu
         {
             internal static string selectOldStyleMenu = "//*[@id='oldSelectMenu']";
+            internal static string selectSelectOneMenu = "//*[@id='selectOne']";
         }
     }
 }
