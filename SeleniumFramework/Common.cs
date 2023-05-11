@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -89,6 +90,34 @@ namespace SeleniumFramework.Pages
 
             // Alternatyva be ExpectedConditions
             //return wait.Until(driver => driver.FindElement(By.XPath(locator)).Displayed);
+        }
+
+        internal static void DoubleClick(string locator)
+        {
+            Actions actions = new Actions(Driver.GetDriver());
+            IWebElement element = GetElement(locator);
+
+            actions.DoubleClick(element);
+            actions.Perform();
+        }
+
+        internal static void RightClick(string locator)
+        {
+            Actions actions = new Actions(Driver.GetDriver());
+            IWebElement element = GetElement(locator);
+
+            actions.ContextClick(element);
+            actions.Perform();
+        }
+
+        internal static void SendTextAndPressEnter(string locator, string text)
+        {
+            Actions actions = new Actions(Driver.GetDriver());
+            IWebElement element = GetElement(locator);
+
+            actions.SendKeys(text);
+            actions.SendKeys(Keys.Enter);
+            actions.Perform();
         }
     }
 }

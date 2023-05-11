@@ -22,5 +22,15 @@
             internal static string buttonFirst = "//*[@id='enableAfter']";
             internal static string buttonThird = "//*[@id='visibleAfter']";
         }
+
+        internal static class Buttons
+        {
+            internal static string buttonFirst = "//*[@id='doubleClickBtn']";
+            internal static string outputDoubleClick = "//*[@id='doubleClickMessage']";
+            internal static string buttonSecond = "//*[@id='rightClickBtn']";
+            internal static string outputRightClick = "//*[@id='rightClickMessage']";
+            internal static string buttonThird = "(//*[contains(@class, 'btn-primary')])[3]";
+            internal static string outputLeftClick = "//*[@id='dynamicClickMessage']";
+        }
     }
 }
