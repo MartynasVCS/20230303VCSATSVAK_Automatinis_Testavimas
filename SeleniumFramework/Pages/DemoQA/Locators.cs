@@ -32,5 +32,10 @@
             internal static string buttonThird = "(//*[contains(@class, 'btn-primary')])[3]";
             internal static string outputLeftClick = "//*[@id='dynamicClickMessage']";
         }
+
+        internal static class SelectMenu
+        {
+            internal static string selectOldStyleMenu = "//*[@id='oldSelectMenu']";
+        }
     }
 }

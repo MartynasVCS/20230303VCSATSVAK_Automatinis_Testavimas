@@ -110,14 +110,22 @@ namespace SeleniumFramework.Pages
             actions.Perform();
         }
 
-        internal static void SendTextAndPressEnter(string locator, string text)
+        internal static SelectElement GetSelectElement(string locator)
         {
-            Actions actions = new Actions(Driver.GetDriver());
             IWebElement element = GetElement(locator);
+            return new SelectElement(element);
+        }
 
-            actions.SendKeys(text);
-            actions.SendKeys(Keys.Enter);
-            actions.Perform();
+        internal static void SelectOptionByText(string locator, string optionText)
+        {
+            SelectElement selectElement = GetSelectElement(locator);
+            selectElement.SelectByText(optionText);
+        }
+
+        internal static string GetSelectedOption(string locator)
+        {
+            SelectElement selectElement = GetSelectElement(locator);
+            return selectElement.SelectedOption.Text;
         }
     }
 }
