@@ -48,9 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DemoQA\DynamicPropertiesTests.cs" />
     <Compile Include="DemoQA\TextBoxTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeleniumEasy\BasicFirstFormDemoTests.cs" />
+    <Compile Include="SeleniumEasy\DynamicDataLoadingDemoTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

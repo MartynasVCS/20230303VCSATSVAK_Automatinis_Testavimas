@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -52,9 +55,11 @@
   <ItemGroup>
     <Compile Include="Driver.cs" />
     <Compile Include="Common.cs" />
+    <Compile Include="Pages\DemoQA\DynamicProperties.cs" />
     <Compile Include="Pages\DemoQA\Locators.cs" />
     <Compile Include="Pages\DemoQA\TextBox.cs" />
     <Compile Include="Pages\SeleniumEasy\BasicFirstFormDemo.cs" />
+    <Compile Include="Pages\SeleniumEasy\DynamicDataLoadingDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
