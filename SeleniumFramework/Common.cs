@@ -4,6 +4,8 @@ using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SeleniumFramework.Pages
 {
@@ -14,9 +16,24 @@ namespace SeleniumFramework.Pages
             return Driver.GetDriver().FindElement(By.XPath(locator));
         }
 
+        private static List<IWebElement> GetElements(string locator)
+        {
+            return Driver.GetDriver().FindElements(By.XPath(locator)).ToList();
+        }
+
         internal static void Click(string locator)
         {
             GetElement(locator).Click();
+        }
+
+        internal static void ClickElements(string locator)
+        {
+            List<IWebElement> elements = GetElements(locator);
+
+            foreach(IWebElement element in elements)
+            {
+                element.Click();
+            }
         }
 
         internal static void SendKeys(string locator, string keys)
@@ -126,6 +143,24 @@ namespace SeleniumFramework.Pages
         {
             SelectElement selectElement = GetSelectElement(locator);
             return selectElement.SelectedOption.Text;
+        }
+
+        internal static string GetElementAttributeValue(string locator, string attributeName)
+        {
+            return GetElement(locator).GetAttribute(attributeName);
+        }
+
+        internal static List<bool> GetElementsCheckedStatusList(string locator)
+        {
+            List<bool> statuses = new List<bool>();
+
+            List<IWebElement> elements = GetElements(locator);
+            foreach(IWebElement element in elements)
+            {
+                statuses.Add(element.Selected);
+            }
+
+            return statuses;
         }
     }
 }

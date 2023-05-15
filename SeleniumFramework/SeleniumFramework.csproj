@@ -60,6 +60,7 @@
     <Compile Include="Pages\DemoQA\Locators.cs" />
     <Compile Include="Pages\DemoQA\SelectMenu.cs" />
     <Compile Include="Pages\DemoQA\TextBox.cs" />
+    <Compile Include="Pages\SeleniumEasy\BasicCheckboxDemo.cs" />
     <Compile Include="Pages\SeleniumEasy\BasicFirstFormDemo.cs" />
     <Compile Include="Pages\SeleniumEasy\DynamicDataLoadingDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
