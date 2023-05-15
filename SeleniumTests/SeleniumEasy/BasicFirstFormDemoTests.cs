@@ -1,15 +1,14 @@
 ﻿using NUnit.Framework;
-using SeleniumFramework;
 using SeleniumFramework.Pages.SeleniumEasy;
+using SeleniumTests.BaseTests;
 
 namespace SeleniumTests.SeleniumEasy
 {
-    internal class BasicFirstFormDemoTests
+    internal class BasicFirstFormDemoTests : BaseTest
     {
         [SetUp]
-        public void SetUp()
+        public void Open()
         {
-            Driver.InitializeDriver();
             BasicFirstFormDemo.Open();
         }
 
@@ -38,12 +37,6 @@ namespace SeleniumTests.SeleniumEasy
             string actualResult = BasicFirstFormDemo.GetTotal();
 
             Assert.AreEqual(expectedResult, actualResult);
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            Driver.ShutdownDriver();
         }
     }
 }

@@ -1,15 +1,14 @@
 ﻿using NUnit.Framework;
 using SeleniumFramework.Pages.SeleniumEasy;
-using SeleniumFramework;
+using SeleniumTests.BaseTests;
 
 namespace SeleniumTests.SeleniumEasy
 {
-    internal class DynamicDataLoadingDemoTests
+    internal class DynamicDataLoadingDemoTests : BaseTest
     {
         [SetUp]
-        public void SetUp()
+        public void Open()
         {
-            Driver.InitializeDriver();
             DynamicDataLoadingDemo.Open();
         }
 
@@ -21,12 +20,6 @@ namespace SeleniumTests.SeleniumEasy
 
             StringAssert.Contains("First Name : ", userInformation);
             StringAssert.Contains("Last Name : ", userInformation);
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            Driver.ShutdownDriver();
         }
     }
 }
