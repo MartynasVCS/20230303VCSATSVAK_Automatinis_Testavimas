@@ -9,7 +9,10 @@ namespace SeleniumFramework
 
         public static void InitializeDriver()
         {
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--window-size=1920,1080");
+            options.AddArgument("--headless=new");
+            driver = new ChromeDriver(options);
         }
 
         internal static IWebDriver GetDriver()
