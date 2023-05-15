@@ -162,5 +162,39 @@ namespace SeleniumFramework.Pages
 
             return statuses;
         }
+
+        internal static string GetAlertText()
+        {
+            return Driver.GetDriver().SwitchTo().Alert().Text;
+        }
+
+        internal static void AcceptAlert()
+        {
+            Driver.GetDriver().SwitchTo().Alert().Accept();
+        }
+
+        internal static bool CheckIfAlertIsActive()
+        {
+            try
+            {
+                Driver.GetDriver().SwitchTo().Alert();
+            } 
+            catch (NoAlertPresentException)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        internal static void SendKeysToAlert(string keys)
+        {
+            Driver.GetDriver().SwitchTo().Alert().SendKeys(keys);
+        }
+
+        internal static void DismissAlert()
+        {
+            Driver.GetDriver().SwitchTo().Alert().Dismiss();
+        }
     }
 }
