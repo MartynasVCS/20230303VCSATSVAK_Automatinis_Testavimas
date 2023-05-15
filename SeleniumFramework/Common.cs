@@ -196,5 +196,18 @@ namespace SeleniumFramework.Pages
         {
             Driver.GetDriver().SwitchTo().Alert().Dismiss();
         }
+
+        internal static List<string> GetElementsTextList(string locator)
+        {
+            List<string> texts = new List<string>();
+
+            List<IWebElement> elements = GetElements(locator);
+            foreach(IWebElement element in elements)
+            {
+                texts.Add(element.Text);
+            }
+
+            return texts;
+        }
     }
 }
