@@ -2,8 +2,10 @@
 using SeleniumFramework.Pages.SeleniumEasy;
 using SeleniumTests.BaseTests;
 
+[assembly: LevelOfParallelism(3)]
 namespace SeleniumTests.SeleniumEasy
 {
+    [Parallelizable(scope: ParallelScope.Children)]
     internal class JavascriptAlertBoxDemoTests : BaseTest
     {
         [SetUp]
