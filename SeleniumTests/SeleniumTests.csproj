@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BaseTests\BaseTestWithChromeProfile.cs" />
     <Compile Include="BaseTests\BaseTest.cs" />
+    <Compile Include="DemoQA\BrowserWindowsTests.cs" />
     <Compile Include="DemoQA\ButtonsTests.cs" />
     <Compile Include="DemoQA\DynamicPropertiesTests.cs" />
     <Compile Include="DemoQA\FramesTests.cs" />

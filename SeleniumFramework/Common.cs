@@ -220,5 +220,15 @@ namespace SeleniumFramework.Pages
         {
             Driver.GetDriver().SwitchTo().DefaultContent();
         }
+
+        internal static List<string> GetWindowHandles()
+        {
+            return Driver.GetDriver().WindowHandles.ToList();
+        }
+
+        internal static void SwitchToWindowByHandle(string handle)
+        {
+            Driver.GetDriver().SwitchTo().Window(handle);
+        }
     }
 }
