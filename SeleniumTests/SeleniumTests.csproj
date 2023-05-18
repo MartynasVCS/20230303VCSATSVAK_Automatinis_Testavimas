@@ -59,6 +59,7 @@
     <Compile Include="SeleniumEasy\BasicSelectDropdownDemoTests.cs" />
     <Compile Include="SeleniumEasy\DynamicDataLoadingDemoTests.cs" />
     <Compile Include="SeleniumEasy\JavascriptAlertBoxDemoTests.cs" />
+    <Compile Include="WarcraftMovies\HomeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
