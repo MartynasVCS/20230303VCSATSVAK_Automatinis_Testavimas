@@ -17,7 +17,7 @@ namespace SeleniumTests.BaseTests
         {
             if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-                Driver.TakeScreenshot();
+                Driver.TakeScreenshot(TestContext.CurrentContext.Test.MethodName);
             }
             Driver.ShutdownDriver();
         }
